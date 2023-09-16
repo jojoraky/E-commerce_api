@@ -4,12 +4,11 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "npm run build && strapi develop",  // Modified develop script to run build and then develop
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
- 
   "dependencies": {
     "@strapi/plugin-i18n": "4.13.3",
     "@strapi/plugin-users-permissions": "4.13.3",
@@ -17,6 +16,7 @@
     "@types/stripe": "^8.0.417",
     "better-sqlite3": "8.5.0",
     "express": "^4.18.2",
+    "strapi-plugin-netlify-deployments": "^2.0.1",
     "stripe": "^11.18.0"
   },
   "author": {
